@@ -1,0 +1,13 @@
+.linkedin {
+  margin: 15px 0;
+  transition: filter 0.5s ease;
+}
+
+.linkedin:hover {
+  filter: drop-shadow(0 0 5px white);
+}
+
+.block {
+  display: block;
+  height: 50px;
+}

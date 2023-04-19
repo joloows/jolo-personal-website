@@ -1,0 +1,15 @@
+.about {
+  text-align: left;
+}
+
+.title {
+  margin-top: 55px;
+}
+
+.projects {
+  text-align: left;
+}
+
+.projects_container {
+  display: flex;
+}
