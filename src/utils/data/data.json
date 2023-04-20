@@ -2,7 +2,7 @@
     "projects": [
         {
             "name": "Cat Attack",
-            "description": "A cat fucking attacks you",
+            "description": "A cat hecking attacks you",
             "imageSrc": "src/assets/img/catattack.gif",
             "alt": "catattack.gif"
         },
@@ -14,7 +14,7 @@
         },
         {
             "name": "Cat Explode",
-            "description": "A cat fucking exploding (epic!!!)",
+            "description": "A cat fudging exploding (epic!!!)",
             "imageSrc": "src/assets/img/catexplode.gif",
             "alt": "catexplode.gif"
         }

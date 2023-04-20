@@ -1,13 +1,15 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { Slide, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Navbar from "./components/Navbar";
+import "./App.css";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
-import Navbar from "./components/Navbar";
-import { Slide, ToastContainer } from "react-toastify";
-import "./App.css";
-import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+  const location = useLocation();
   return (
     <div className="app">
       <Navbar />
@@ -18,11 +20,13 @@ function App() {
         hideProgressBar={true}
         autoClose={3000}
       />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }

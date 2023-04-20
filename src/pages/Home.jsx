@@ -1,5 +1,6 @@
 import React from "react";
 import Typed from "typed.js";
+import { motion } from "framer-motion";
 
 function Home() {
   const element = React.useRef(null);
@@ -23,11 +24,17 @@ function Home() {
   }, []);
 
   return (
-    <div className="home">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className="home"
+    >
       <h1>
         <span ref={element} />
       </h1>
-    </div>
+    </motion.div>
   );
 }
 
