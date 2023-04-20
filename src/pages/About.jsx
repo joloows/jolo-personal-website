@@ -1,6 +1,6 @@
 import styles from "src/assets/styles/About.module.css";
 import ProjectItem from "src/components/ProjectItem";
-import data from "src/utils/data/data.json";
+import data from "src/utils/data/data.js";
 import { motion } from "framer-motion";
 
 function About() {
