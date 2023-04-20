@@ -12,15 +12,18 @@ function Navbar() {
         href="https://github.com/joloows"
         target="_blank"
       >
-        <GitHubLogo />
+        <GitHubLogo className={styles.github_logo} />
       </a>
       <div className={styles.link_margin}>
-        <NavLink to="/" className={`${styles.link} ${styles.link_padding}`}>
+        <NavLink
+          to="/"
+          className={`${styles.link} ${styles.link_padding} ${styles.wrapper_1}`}
+        >
           Home
         </NavLink>
         <NavLink
           to="/about"
-          className={`${styles.link} ${styles.link_padding}`}
+          className={`${styles.link} ${styles.link_padding} ${styles.wrapper_2}`}
         >
           About
         </NavLink>

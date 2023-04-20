@@ -1,42 +1,63 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  --dark: #101010;
-  --light: #ffffff;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: var(--dark);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  --font-color: rgba(0, 0, 0, 0.87);
+  --background-color: #ffffff;
+  --border-color: lightgrey;
+  --button-color: lightgrey;
+  --scroll-hover: rgb(192, 191, 191);
+  --input: rgb(124, 124, 124);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+:root[data-theme="dark"] {
+  --font-color: rgba(255, 255, 255, 0.87);
+  --background-color: #101010;
+  --border-color: rgb(37, 36, 36);
+  --button-color: #1a1a1a;
+  --scroll-hover: rgb(52, 51, 51);
+  --input: rgb(97, 97, 97);
 }
 
 body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
   /* overflow: hidden; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  transition: background 1s;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  transition: color 1s;
+}
+
+p,
+h2,
+h3,
+h4,
+h5,
+a {
+  transition: color 1s;
 }
 
 button {
@@ -44,49 +65,46 @@ button {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  color: white;
+  color: var(--font-color);
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--button-color);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: color 1s, background 1s, border-color 0.25s;
 }
 button:hover {
-  border-color: white;
+  border-color: var(--font-color);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* TODO: Fix scroll bar transitions */
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  border-left: 0.5px solid rgb(37, 36, 36);
-  border-top: 0.5px solid rgb(37, 36, 36);
-  background: var(--dark);
+  border-left: 0.5px solid var(--border-color);
+  border-top: 0.5px solid var(--border-color);
+  background-color: var(--background-color);
+  transition: border 1s, background 1s;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(37, 36, 36);
+  background: var(--border-color);
+  transition: border 1s, background 1s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(52, 51, 51);
+  background: var(--scroll-hover);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: var(--light);
+/* @media (prefers-color-scheme: dark) {
+  body {
+    color: var(--font-color);
+    background-color: #101010;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+} */
