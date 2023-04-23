@@ -43,11 +43,12 @@ function ToggleThemeSlider() {
           onChange={toggleTheme}
           defaultChecked={!defaultDark}
         />
-        <span className={styles.slider_span}></span>
+        <span
+          className={styles.slider_span}
+          credit="Inspired by the design from Tim Silva"
+          link="https://dribbble.com/shots/14199649-Dark-Light-Mode-Toggle-Switch-Pattern-A11y"
+        ></span>
       </label>
-      {/* <a href="https://dribbble.com/shots/14199649-Dark-Light-Mode-Toggle-Switch-Pattern-A11y">
-        Inspired by the design from Tim Silva
-      </a> */}
     </div>
   );
 }

@@ -27,6 +27,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
   /* overflow: hidden; */
@@ -101,10 +102,3 @@ button:focus-visible {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--scroll-hover);
 }
-
-/* @media (prefers-color-scheme: dark) {
-  body {
-    color: var(--font-color);
-    background-color: #101010;
-  }
-} */
