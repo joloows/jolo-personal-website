@@ -26,8 +26,10 @@ function ContactForm() {
     const response = await sendEmail(message);
     if (response.ok) {
       toast.success("Message sent successfully.");
+      console.log(response.body);
     } else {
       toast.error("Message failed to send.");
+      console.error(response.body);
     }
   };
 
