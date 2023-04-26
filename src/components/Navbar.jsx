@@ -139,7 +139,7 @@ function Navbar() {
             },
           },
         }}
-        className={styles.dropdown_menu}
+        className={`${styles.dropdown_menu} ${styles.active}`}
       >
         <motion.ul className={styles.list}>
           <DropdownMenuItems menus={menuList} />

@@ -80,7 +80,7 @@
   margin: 10px 0 0 15px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
   .head {
     font-size: 43px;
   }
