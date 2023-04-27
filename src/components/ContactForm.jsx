@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import sendEmail from "src/utils/scripts/email.js";
-import generateMessage from "src/utils/scripts/generateMessage.js";
+import { sendEmail, generateMessage } from "src/utils/scripts/email.js";
 import styles from "src/assets/styles/ContactForm.module.css";
 import { toast } from "react-toastify";
 

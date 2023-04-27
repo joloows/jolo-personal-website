@@ -1,3 +1,11 @@
+function generateMessage(name, email, message) {
+  return `
+        Name: ${name}
+        Email: ${email}
+        Message: ${message}
+        `;
+}
+
 async function sendEmail(message) {
   let data = {
     service_id: import.meta.env.VITE_SERVICE_ID,
@@ -8,6 +16,7 @@ async function sendEmail(message) {
     },
   };
   data.template_params.message = message;
+  console.log(data);
   const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
     method: "POST",
     headers: {
@@ -17,4 +26,4 @@ async function sendEmail(message) {
   });
   return response;
 }
-export default sendEmail;
+export { sendEmail, generateMessage };
