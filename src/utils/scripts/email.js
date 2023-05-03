@@ -16,7 +16,6 @@ async function sendEmail(message) {
     },
   };
   data.template_params.message = message;
-  console.log(data);
   const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
     method: "POST",
     headers: {
