@@ -1,11 +1,26 @@
-import "src/assets/styles/ProjectItem.css";
+import styles from "src/assets/styles/ProjectItem.module.css";
 
-function ProjectItem({ name, description, image, alt }) {
+function ProjectTags({ tags }) {
   return (
-    <div className="project-item">
-      <img src={image} alt={alt} />
-      <h3>{name}</h3>
-      <p>{description}</p>
+    <div className={styles.project_tags}>
+      {tags.map((tag, key) => {
+        return (
+          <h5 className={styles.project_tag} key={key}>
+            {tag}
+          </h5>
+        );
+      })}
+    </div>
+  );
+}
+
+function ProjectItem({ name, description, image, alt, tags }) {
+  return (
+    <div className={styles.project_item}>
+      <img className={styles.project_image} src={image} alt={alt} />
+      <h3 className={styles.project_title}>{name}</h3>
+      <p className={styles.project_description}>{description}</p>
+      <ProjectTags tags={tags} />
     </div>
   );
 }

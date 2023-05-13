@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 function About() {
   const projectItems = data.projects.map(
-    ({ name, description, imageSrc, alt }, key) => {
+    ({ name, description, imageSrc, alt, tags }, key) => {
       return (
         <ProjectItem
           key={key}
@@ -13,6 +13,7 @@ function About() {
           description={description}
           image={imageSrc}
           alt={alt}
+          tags={tags}
         />
       );
     }

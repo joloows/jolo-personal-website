@@ -1,26 +1,23 @@
-import imgUrl1 from "src/assets/img/catattack.gif";
-import imgUrl2 from "src/assets/img/catkiss.gif";
-import imgUrl3 from "src/assets/img/catexplode.gif";
+import imgUrl1 from "src/assets/img/todo-app.png";
+import imgUrl2 from "src/assets/img/student-enrollment-system.png";
 
 export default {
   projects: [
     {
-      name: "Cat Attack",
-      description: "A cat hecking attacks you",
+      name: "Django Todo App",
+      description:
+        "A simple to-do app in a web browser with user authentication.",
       imageSrc: imgUrl1,
-      alt: "catattack.gif",
+      alt: "todo-app.png",
+      tags: ["python", "Django", "JavaScript", "jQuery", "HTML/CSS"],
     },
     {
-      name: "Cat Kiss",
-      description: "A cat kissing you passionately",
+      name: "Student Enrollment System",
+      description:
+        "An enrollment system made with VB6 and Microsoft Access as a database for the enrollees.",
       imageSrc: imgUrl2,
-      alt: "catkiss.gif",
-    },
-    {
-      name: "Cat Explode",
-      description: "A cat fudging exploding (epic!!!)",
-      imageSrc: imgUrl3,
-      alt: "catexplode.gif",
+      alt: "student-enrollment-system.png",
+      tags: ["VB6", "Access", "SQL"],
     },
   ],
 };
