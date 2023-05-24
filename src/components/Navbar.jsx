@@ -38,13 +38,11 @@ function DropdownMenuItems({ menus }) {
   return menus.map((menu, key) => {
     let style = styles.dropdown_menu_item;
     return (
-      <>
-        <motion.li key={key} className={style}>
-          <NavLink to={menu.url} className={styles.link}>
-            {menu.title}
-          </NavLink>
-        </motion.li>
-      </>
+      <motion.li key={key} className={style}>
+        <NavLink to={menu.url} className={styles.link}>
+          {menu.title}
+        </NavLink>
+      </motion.li>
     );
   });
 }

@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import ContactForm from "src/components/ContactForm";
 import { ReactComponent as LinkedInLogo } from "src/assets/linkedin.svg";
 import styles from "src/assets/styles/Contact.module.css";
 import { motion } from "framer-motion";
 
 function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}

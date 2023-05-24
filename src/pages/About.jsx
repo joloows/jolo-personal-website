@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import styles from "src/assets/styles/About.module.css";
 import ProjectItem from "src/components/ProjectItem";
 import data from "src/utils/data/data.js";
 import { motion } from "framer-motion";
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const projectItems = data.projects.map(
     ({ name, description, imageSrc, alt, tags }, key) => {
       return (
